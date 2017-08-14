@@ -13,7 +13,6 @@ class HelloWorldServer extends HttpServer {
     router
       .filter[LoggingMDCFilter[Request, Response]]
       .filter[TraceIdMDCFilter[Request, Response]]
-      .filter[CommonFilters]
       .add[HelloWorldController]
   }
 }
